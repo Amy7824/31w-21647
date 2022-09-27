@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Theme Name: A22-31W
+Theme Name: A22-31W-Cours
 Theme URI: http://underscores.me/
 Author: zhile wu
 Author URI: http://Referenced.ca
@@ -10,7 +10,7 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: underscore
+Text Domain: 31w
 */
 /*--------------------------------------------------------------*/
 /* Inherit box-sizing to more easily change it's value on a component level.
@@ -335,7 +335,15 @@ template {
 }
 
 body {
-  background-color: rgb(235, 234, 225);
+  background-color: rgb(219, 218, 202);
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.trace {
+  color: rgb(28, 114, 85);
 }
 
 h1 {
