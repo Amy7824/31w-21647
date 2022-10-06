@@ -1,1 +1,38 @@
-$couleur__background-body : rgb(219, 218, 202);
+$couleur__background--body : rgb(219, 218, 202);
+/*------------Couleur d'arriere plan des titres-------*/
+$couleur__background--h1: rgb(233, 153, 153);
+$couleur__background--h2h3h4:rgb(116, 226, 208);
+$couleur__background--code:rgb(187, 60, 60);
+/*------------Couleur des titres-------*/
+$couleur--h1: rgb(233, 153, 153);
+$couleur--h2h3h4:rgb(116, 226, 208);
+$couleur--h5h6:rgb(14, 85, 73);
+$couleur--code:rgb(187, 60, 60);
+
+
+/* ----- couleur des liens ------*/
+$couleur__link: rgb(204, 140, 140);
+$couleur__link-visited:rgb(145, 141, 141);
+$couleur__link-hover:rgb(241, 13, 13);
+
+
+/* -------------couleur bouton */
+$color__border-button: #fff;
+$color__background-button: #bbb;
+$color__border-button-hover: #fff;
+$color__border-button-focus:#bbb;
+
+
+/* ------------couleur fields input text */
+$color__text-input:#aaa;
+$color__border-input:#444;
+$color__text-input-focus:#777;
+
+
+/* -------------couleur hr(ligne horizontale */
+$color__background-hr: rgb(239, 240, 245);
+
+/* ---------couleur du simple */
+$color__background-pre: #aaa;
+$color__background-ins: rgb(222, 231, 138);
+$color__border-abbr: #bbb;
