@@ -36,9 +36,9 @@ Text Domain: 31w
 
 // les composants
 @import "composants/nav_principal";
+@import "composants/nav_aside";
 
 //Layout
 @import "layouts/content-sidebar";
 @import "layouts/no-sidebar";
 @import "layouts/sidebar-content";
-
