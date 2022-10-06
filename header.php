@@ -45,6 +45,6 @@
 		</div><!-- .site-branding -->
 		
 	</header><!-- #masthead -->
-	<aside>
-
+	<aside class="widget__area">
+		<h2>Menu Secondaire</h2>
 	</aside>
