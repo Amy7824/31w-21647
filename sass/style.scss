@@ -23,6 +23,7 @@ Text Domain: 31w
 @import "generic/box-sizing";
 @import "generic/normalize";
 
+<<<<<<< HEAD
 //les éléments de base
 @import "base/body";
 @import "base/heading";
@@ -42,3 +43,8 @@ Text Domain: 31w
 @import "layouts/content-sidebar";
 @import "layouts/no-sidebar";
 @import "layouts/sidebar-content";
+=======
+//les elements de baseLine
+@import "base/body";
+@import "base/heading";
+>>>>>>> 447825c (ajouter le sass)
