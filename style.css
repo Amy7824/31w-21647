@@ -449,7 +449,7 @@ a {
   color: rgb(204, 140, 140);
 }
 a:visited {
-  color: rgb(145, 141, 141);
+  color: rgb(117, 6, 6);
 }
 a:hover, a:focus, a:active {
   color: rgb(241, 13, 13);
@@ -664,7 +664,7 @@ big {
 */
 .site {
   display: grid;
-  grid-template-columns: auto 25%;
+  grid-template-columns: auto 20%;
   grid-template-areas: "header header" "main sidebar" "footer footer";
 }
 
@@ -699,7 +699,7 @@ big {
 
 .site {
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 20% auto;
   grid-template-areas: "header header" "sidebar main" "footer footer";
 }
 
