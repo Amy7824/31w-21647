@@ -76,8 +76,8 @@ function igc31w_filtre_choix_menu($obj_menu){
     foreach($obj_menu as $cle => $value)
     {
        // print_r($value);
-       //$value->title = substr($value->title,0,7);
-       $value->title = wp_trim_words($value->title,3,"...");
+       $value->title = substr($value->title,7);
+       $value->title = wp_trim_words($value->title,3, " ...");
        // echo $value->title . '<br>';
  
     }
@@ -87,12 +87,12 @@ function igc31w_filtre_choix_menu($obj_menu){
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
-	/* Register the 'primary' sidebar. */
+	/* Register the 'footer-1' sidebar. */
 	register_sidebar(
 		array(
-			'id'            => 'primary',
-			'name'          => __( 'Primary Sidebar' ),
-			'description'   => __( 'A short description of the sidebar.' ),
+			'id'            => 'footer-1',
+			'name'          => __( 'Sidebar-footer-1 ' ),
+			'description'   => __( 'Premier sidebar du footer' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -100,6 +100,16 @@ function my_register_sidebars() {
 		)
 	);
 	/* Repeat register_sidebar() code for additional sidebars. */
-
+    register_sidebar(
+		array(
+			'id'            => 'footer-2',
+			'name'          => __( 'Sidebar-footer-2 ' ),
+			'description'   => __( 'Deuxième sidebar du footer' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu");

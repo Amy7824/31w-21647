@@ -29,7 +29,7 @@
                         <span><?php the_time();?></span>   
                     </small>
                     <code><?php the_author();?></code>
-                    <pre><?phpthe_category();?></pre>
+                    <pre><?php the_category();?></pre>
                 </section>
                 <?php 
                 
