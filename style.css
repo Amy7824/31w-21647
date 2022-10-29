@@ -682,7 +682,7 @@ big {
 
 .site {
   display: grid;
-  grid-template-columns: auto 30%;
+  grid-template-columns: auto 20%;
   grid-template-areas: "header header" "main sidebar" "footer footer";
 }
 
@@ -723,7 +723,7 @@ big {
 @media screen and (min-width: 700px) {
   .site {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 20% auto;
     grid-template-areas: "header header" "sidebar main" "footer footer";
   }
 }
