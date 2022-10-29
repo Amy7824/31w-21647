@@ -680,6 +680,22 @@ big {
   flex: 1;
 }
 
+#menu-utile-3 {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: var(Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif);
+  font-weight: bold;
+}
+
+#menu-utile li a {
+  color: #fff;
+}
+
+.wp-image-139 {
+  height: 250px;
+  width: 100px;
+}
+
 .site {
   display: grid;
   grid-template-columns: auto 20%;
