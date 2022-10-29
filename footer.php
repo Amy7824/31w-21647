@@ -15,9 +15,8 @@
 	
 	<div><?php get_sidebar( 'footer-1' ); ?></div>
 		<div><?php get_sidebar( 'footer-2' ); ?></div>
-		<div>Lorem3</div>
-		<div>Lorem3</div>
-		<div>Lorem3</div>
+		<div><?php get_sidebar( 'footer-3' ); ?></div>
+
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
