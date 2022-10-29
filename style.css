@@ -446,7 +446,8 @@ hr {
 }
 
 a {
-  color: rgb(204, 140, 140);
+  color: rgb(29, 23, 217);
+  text-decoration: none;
 }
 a:visited {
   color: rgb(117, 6, 6);
@@ -670,6 +671,10 @@ big {
 .menu__aside .menu-item {}
 .menu__aside a {}
 */
+#sidebar-aside-1 {
+  margin-top: 1.5em;
+}
+
 .site__footer {
   display: flex;
   justify-content: space-around;
@@ -691,12 +696,19 @@ big {
   color: #fff;
 }
 
-.wp-image-139 {
-  height: 250px;
-  width: 100px;
+#menu-utile li:hover {
+  color: rgb(24, 13, 239);
+}
+
+.menu-utile-container {
+  margin-top: 2em;
 }
 
 #sidebar-footer-2 {
+  margin-top: 2em;
+}
+
+#sidebar-footer-3 {
   margin-top: 2em;
 }
 

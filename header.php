@@ -54,4 +54,5 @@
 			"container_class" => "menu__aside"
 		));
 	    ?>
+		<div><?php get_sidebar( 'aside-1' ); ?></div>
 	</aside>
