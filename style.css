@@ -4,7 +4,8 @@ Theme Name: zhile-31W-Cours
 Theme URI: http://underscores.me/
 Author: zhile wu
 Author URI: http://Referenced.ca
-Description: Thème de base
+Description: Thème de base 
+             https://github.com/Amy7824/31w-21647.git
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -204,9 +205,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -214,9 +215,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -225,9 +226,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -271,8 +272,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -280,8 +281,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -289,7 +290,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -297,7 +298,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -358,14 +359,19 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-h2, h2, h3, h4, h5, h6 {
+h2,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   border: 1px solid;
   border-color: #fff;
   border-radius: 3px;
@@ -375,57 +381,58 @@ input[type=submit] {
   padding: 0.6em 1em 0.4em;
 }
 button:hover,
-input[type=button]:hover,
-input[type=reset]:hover,
-input[type=submit]:hover {
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
   border-color: #fff;
 }
-button:active, button:focus,
-input[type=button]:active,
-input[type=button]:focus,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=submit]:active,
-input[type=submit]:focus {
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
   border-color: #bbb;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password],
-input[type=search],
-input[type=number],
-input[type=tel],
-input[type=range],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=datetime],
-input[type=datetime-local],
-input[type=color],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 textarea {
   color: #aaa;
   border: 1px solid #444;
   border-radius: 3px;
   padding: 3px;
 }
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
-input[type=range]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=week]:focus,
-input[type=time]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=color]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
 textarea:focus {
   color: #777;
 }
@@ -452,13 +459,16 @@ a {
 a:visited {
   color: rgb(117, 6, 6);
 }
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: rgb(241, 13, 13);
 }
 a:focus {
   outline: thin dotted;
 }
-a:hover, a:active {
+a:hover,
+a:active {
   outline: 0;
 }
 
@@ -469,13 +479,16 @@ a:hover, a:active {
 .menu__aside a:visited {
   color: rgb(60, 58, 199);
 }
-.menu__aside a:hover, .menu__aside a:focus, .menu__aside a:active {
+.menu__aside a:hover,
+.menu__aside a:focus,
+.menu__aside a:active {
   color: rgb(150, 163, 218);
 }
 .menu__aside a:focus {
   outline: thin dotted;
 }
-.menu__aside a:hover, .menu__aside a:active {
+.menu__aside a:hover,
+.menu__aside a:active {
   outline: 0;
 }
 
@@ -493,7 +506,8 @@ ol {
 }
 
 li > ul,
-li > ol { /* sous liste */
+li > ol {
+  /* sous liste */
   margin-bottom: 0;
   margin-left: 1.5em;
 }
@@ -597,29 +611,6 @@ big {
   height: 2rem;
 }
 
-/*    //nav
-
-    .menu {
-        //ul
-        list-style-type: none;
-
-        .menu-item {
-            //li
-
-
-            a{
-
-            }
-        }
-    }
-}*/
-/* transformation en CSS 
-.menu-primaire-container{}
-.menu-primaire-container .menu{}
-.menu-primaire-container .menu .menu-item{}
-//ou .menu-primaire-container .menu-item{}
-.menu-primaire-container .menu .menu-item a{}
-// ou .menu-primaire-container a{}*/
 .menu__principal {
   background-color: #000;
   display: flex;
@@ -752,7 +743,7 @@ big {
   grid-template-columns: auto;
   grid-template-areas: "sidebar" "header" "main" "footer";
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 960px) {
   .site {
     display: grid;
     grid-template-columns: 20% auto;
@@ -775,4 +766,4 @@ big {
 
 .site__footer {
   grid-area: footer;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

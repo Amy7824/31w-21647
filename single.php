@@ -15,7 +15,7 @@
 <h1 class="trace">single.php</h1>
 <?php get_header(); ?>
     <main class="site__main">
-        test
+    
     <?php
         if ( have_posts() ) :
             while ( have_posts() ) :
