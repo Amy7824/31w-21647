@@ -46,7 +46,7 @@
 		
 	</header><!-- #masthead -->
 	
-	<aside class="widget__area">
+	<aside class="site__menu">
 		<h2>Menu Secondaire</h2>
 		<?php wp_nav_menu(array(
 			"menu" => "aside",
@@ -54,5 +54,8 @@
 			"container_class" => "menu__aside"
 		));
 	    ?>
+	</aside>
+	<aside class="site__sidebar">
 		<div><?php get_sidebar( 'aside-1' ); ?></div>
+		<div><?php get_sidebar( 'aside-2' ); ?></div>
 	</aside>
