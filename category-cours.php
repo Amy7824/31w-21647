@@ -25,6 +25,7 @@
                 <?php the_title();?></a></h1>
                 <h2>Durée du cours: <?php the_field('duree');?></h2>
                 <h2>Professeur: <?php the_field('professeur');?></h2>
+                <h2>Inscription: <?php the_field('inscription');?></h2>
                 <?php the_content(null, true); ?>
                
           <?php  endwhile;?>
