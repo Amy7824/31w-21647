@@ -1,3 +1,25 @@
+.site__menu {
+  position: relative;
+}
+
+.chk-burger {
+  display: none;
+}
+
+.chk-burger:checked ~ .burger {
+  transform: rotate(90deg);
+}
+
+.burger {
+  position: absolute;
+  width : 2rem;
+  height: 2rem;
+  top: 10px;
+  left: 10px;
+  transform: rotate(0deg);
+  transition: transform .5s;
+  font-size: 2rem;
+}
 .menu__aside {
   //nav
   display: flex;
