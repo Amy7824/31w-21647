@@ -18,25 +18,25 @@
   position: absolute;
   width : 2rem;
   height: 2rem;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 13rem;
   transform: rotate(0deg);
   transition: transform .5s;
   font-size: 2rem;
-  color: #fff;
+  color: rgb(15, 14, 14);
 }
 .menu__aside {
   //nav
   display: flex;
   position: absolute;
   width: 100vw;
-  top: 70px;
+  top:70px;
   transform: translateX(-100vw);
-  transition: transform .5s;
   background-color: #000;
+  transition: transform .5s;
   @media screen and (min-width: 700px) {
     position: static;
-    transform: translateX(0);
+    transform: translateX(10);
   }
 
   .menu {

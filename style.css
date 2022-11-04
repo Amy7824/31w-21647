@@ -674,12 +674,12 @@ big {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 13rem;
   transform: rotate(0deg);
   transition: transform 0.5s;
   font-size: 2rem;
-  color: #fff;
+  color: rgb(15, 14, 14);
 }
 
 .menu__aside {
@@ -688,13 +688,13 @@ big {
   width: 100vw;
   top: 70px;
   transform: translateX(-100vw);
-  transition: transform 0.5s;
   background-color: #000;
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
     position: static;
-    transform: translateX(0);
+    transform: translateX(10);
   }
 }
 .menu__aside .menu {
