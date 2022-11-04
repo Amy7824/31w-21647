@@ -675,7 +675,7 @@ big {
   width: 2rem;
   height: 2rem;
   top: 15px;
-  left: 13rem;
+  left: 13vw;
   transform: rotate(0deg);
   transition: transform 0.5s;
   font-size: 2rem;
@@ -785,6 +785,10 @@ big {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "main" "footer";
+}
+
+#sidebar {
+  display: none;
 }
 
 .no-sidebar .site {
