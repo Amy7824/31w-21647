@@ -706,6 +706,7 @@ big {
   max-width: 100%;
 }
 .menu__aside a {
+  color: #fff;
   text-decoration: none;
   padding: 15px;
 }
