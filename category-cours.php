@@ -23,9 +23,9 @@
                 the_title('<h2>','</h2>');?>
                 <h1><a href="<?php the_permalink();?>">
                 <?php the_title();?></a></h1>
-                <h2>Durée du cours: <?php the_field('duree');?></h2>
-                <h2>Professeur: <?php the_field('professeur');?></h2>
-                <h2>Inscription: <?php the_field('inscription');?></h2>
+                <div class="info_cours"><h5>Durée du cours: <?php the_field('duree');?></h5>&nbsp
+                &nbsp<h5>Professeur: <?php the_field('professeur');?></h5>&nbsp
+                &nbsp<h5>Inscription: <?php the_field('inscription');?></h5></div>
                 <?php the_content(null, true); ?>
                
           <?php  endwhile;?>
