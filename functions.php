@@ -124,6 +124,7 @@ add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
 // l'argument 10 : niveau de privilège
 // l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
 
+/* -------------------------------------------------------- Initialisation des sidebar */
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
 	/* Register the 'footer-1' sidebar. */
@@ -177,3 +178,16 @@ function my_register_sidebars() {
 		)
 	);
 }
+
+/**
+ *
+ *	La fonction permettra de modifier la requête principale de wordpress « main query »
+ *	Les artcle qui s'afficheront dans la page d'accueil seront les article de catégorie « accueil »
+ *
+ */
+function igc_31w_filtre_requete( $query ) {
+    if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
+        $query->set( 'category_name', 'accueil' );
+    }
+}
+add_action( 'pre_get_posts', 'igc_31w_filtre_requete' );
