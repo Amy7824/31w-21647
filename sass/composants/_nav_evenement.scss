@@ -2,6 +2,7 @@
     
 }
 .menu__evenement .menu {
+    //ul
     list-style: none;
     display: flex;
     border: 1px solid #bbb;
@@ -12,13 +13,37 @@
     width: 25%;
 }
 
-.evenement__porte {
-   background-color: aqua;
+.menu__evenement .menu-item a {
+    text-decoration: none;
+}
+.menu__evenement .menu-item a:hover {
+}
+  
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.evenement__projet {
+.evenement__porte {
     background-color: aquamarine;
-}
-.evenement__stage {
-    background-color: rgb(221, 147, 147);
-}
+  }
+  .evenement__projet {
+    background-color: rgb(127, 153, 255);
+  }
+  .evenement__stage {
+    background-color: rgb(255, 255, 127);
+  }
+  
+  .menu__item__icone {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #aaa;
+  }
+  
+  .evenement__porte .menu__item__icone {
+  }
+  
+  .evenement__projet .menu__item__icone {
+  }
+  
+  .evenement__stage .menu__item__icone {
+  }

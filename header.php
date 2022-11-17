@@ -52,7 +52,9 @@
 		<?php wp_nav_menu(array(
 			"menu" => "aside",
 			"container" => "nav",
-			"container_class" => "menu__aside"
+			"container_class" => "menu__aside",
+			'before'          => '<div>',
+			'after'           => '</div>',
 		));
 	    ?>
 	</aside>
