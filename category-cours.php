@@ -12,27 +12,40 @@
  * @package underscore
  */
 ?>
-<!--<h1 class="trace">front-page.php</h1> -->
+<!-- h1 class="trace">front-page.php</h1 -->
 <?php get_header(); ?>
+
     <main class="site__main">
-    
-    <?php
-        if ( have_posts() ) :
+    <section class="liste">   
+        <?php
+		    if ( have_posts() ) :
             while ( have_posts() ) :
-                the_post();
-                the_title('<h2>','</h2>');?>
-                <h1><a href="<?php the_permalink();?>">
-                <?php the_title();?></a></h1>
+				the_post(); ?>
+                <article class="liste__cours">   
+                <h1><a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?></a></h1>
                 <div class="info_cours"><h4>Durée du cours: <?php the_field('duree');?></h4>&nbsp
                 &nbsp<h4>Professeur: <?php the_field('professeur');?></h4>&nbsp
                 &nbsp<h4>Inscription: <?php the_field('inscription');?></h4></div>
-                <?php the_content(null, true); ?>
+                <?php the_content(null, true); 
+                //wp_trim_words()
+                ?>
+
+                <article>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </section>
+
+    </main>    
+<?php get_footer(); ?>
+</html>
+
+
+
+    
                
-          <?php  endwhile;?>
-       <?php endif;?>
-    ?>
-    </main>
-<?php get_footer();?>
+
 
 
 

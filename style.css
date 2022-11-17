@@ -15,6 +15,7 @@ Text Domain: 31w
 /*--------------------------------------------------------------*/
 /*------------Couleur d'arriere plan des titres-------*/
 /*------------Couleur des titres-------*/
+/* --------------------- Couleurs des liens du titre principal*/
 /* ----- couleur des liens ------*/
 /* -------------couleur bouton */
 /* ------------couleur fields input text */
@@ -66,8 +67,27 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 2vw, 1.3rem);
+}
+
+h5 {
+  font-size: clamp(1.3rem, 2vw, 1.1rem);
+}
+
+h6 {
+  font-size: clamp(1.3rem, 2vw, 1rem);
 }
 
 /* Grouping content
@@ -98,6 +118,7 @@ pre {
  */
 a {
   background-color: transparent;
+  color: rgb(69, 127, 214);
 }
 
 /**
@@ -363,8 +384,36 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-h2, h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 2vw, 1.3rem);
+}
+
+h5 {
+  font-size: clamp(1.3rem, 2vw, 1.1rem);
+}
+
+h6 {
+  font-size: clamp(1.3rem, 2vw, 1rem);
 }
 
 button,
@@ -481,6 +530,23 @@ a:hover, a:active {
   outline: thin dotted;
 }
 .menu__aside a:hover, .menu__aside a:active {
+  outline: 0;
+}
+
+/* ---------------------------------------------------------- Titre principal du site */
+.site__title a {
+  color: rgb(8, 52, 117);
+}
+.site__title a:visited {
+  color: rgb(11, 52, 100);
+}
+.site__title a:hover, .site__title a:focus, .site__title a:active {
+  color: rgb(38, 74, 114);
+}
+.site__title a:focus {
+  outline: thin dotted;
+}
+.site__title a:hover, .site__title a:active {
   outline: 0;
 }
 
@@ -654,6 +720,7 @@ big {
   background-color: #555;
 }
 
+/* transformation en CSS */
 .site__menu {
   position: relative;
 }
@@ -674,12 +741,12 @@ big {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 15px;
-  left: 13vw;
+  top: 10px;
+  left: 10px;
   transform: rotate(0deg);
   transition: transform 0.5s;
   font-size: 2rem;
-  color: rgb(15, 14, 14);
+  color: #fff;
 }
 
 .menu__aside {
@@ -688,13 +755,15 @@ big {
   width: 100vw;
   top: 70px;
   transform: translateX(-100vw);
-  background-color: #000;
   transition: transform 0.5s;
+  background-color: #000;
 }
 @media screen and (min-width: 700px) {
   .menu__aside {
     position: static;
-    transform: translateX(10);
+    transform: translateX(0);
+     /* important de revenir à width 100%  pour remplacer le 100vw*/
+     width: 100%;
   }
 }
 .menu__aside .menu {
@@ -702,13 +771,10 @@ big {
   padding: 0;
   margin: 0;
 }
-.menu__aside .menu-item {
-  max-width: 100%;
-}
+
 .menu__aside a {
-  color: #fff;
   text-decoration: none;
-  padding: 15px;
+  padding: 5px 3px;
 }
 
 /*
@@ -717,8 +783,10 @@ big {
 .menu__aside .menu-item {}
 .menu__aside a {}
 */
-#sidebar-aside-1 {
-  margin-top: 1.5em;
+
+
+.site__title {
+  font-size: clamp(2rem, 4vw, 5rem);
 }
 
 .site__footer {
@@ -730,6 +798,69 @@ big {
 .site__footer div {
   flex: 1;
 }
+
+.site__header {
+  grid-area: header;
+  background-color: #ddd;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  background-color: #ccc;
+}
+
+.site__menu {
+  grid-area: menu;
+}
+
+.site__sidebar {
+  grid-area: sidebar;
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: #000;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "menu" "header" "main" "sidebar" "footer";
+}
+@media screen and (min-width: 700px) {
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "header header" "menu main" "sidebar main" ". main" "footer footer";
+  }
+}
+/*.menu__aside .menu-item {
+  max-width: 100%;
+} */
+.menu__evenement .menu {
+  list-style: none;
+  display: flex;
+  border: 1px solid #bbb;
+  justify-content: space-around;
+}
+
+.menu__evenement .menu_item {
+  width: 25%;
+}
+
+.evenement__porte {
+  background-color: aqua;
+}
+
+.evenement__projet {
+  background-color: aquamarine;
+}
+
+.evenement__stage {
+  background-color: rgb(221, 147, 147);
+}
+
+
 
 #menu-utile-3 {
   padding-top: 20px;
@@ -750,6 +881,10 @@ big {
   margin-top: 2em;
 }
 
+#sidebar-aside-1 {
+  margin-top: 1.5em;
+}
+
 #sidebar-footer-2 {
   margin-top: 2em;
 }
@@ -764,14 +899,6 @@ big {
   grid-template-areas: "header header" "main sidebar" "footer footer";
 }
 
-.site__header {
-  grid-area: header;
-}
-
-.site__main {
-  grid-area: main;
-  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-}
 
 .widget__area {
   grid-area: sidebar;
@@ -779,13 +906,15 @@ big {
 
 .site-footer {
   grid-area: footer;
+  background-color: #000;
 }
 
-.no-sidebar .site {
+
+/*.no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "main" "footer";
-}
+}*/
 
 #sidebar {
   display: none;
@@ -797,36 +926,4 @@ big {
   grid-template-areas: "header" "main" "footer";
 }
 
-.site {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "menu" "header" "main" "sidebar" "footer";
-}
-@media screen and (min-width: 700px) {
-  .site {
-    display: grid;
-    grid-template-columns: 20% auto;
-    grid-template-areas: "header header" "menu main" "sidebar main" ". main" "footer footer";
-  }
-}
-
-.site__header {
-  grid-area: header;
-}
-
-.site__main {
-  grid-area: main;
-  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-}
-
-.site__menu {
-  grid-area: menu;
-}
-
-.site__sidebar {
-  grid-area: sidebar;
-}
-
-.site__footer {
-  grid-area: footer;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

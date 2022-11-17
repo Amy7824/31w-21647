@@ -15,8 +15,14 @@
 <!--<h1 class="trace">front-page.php</h1> -->
 <?php get_header(); ?>
     <main class="site__main">
+
+        <?php
+        wp_nav_menu(array(
+            "menu"=>"evenement",
+            "container"=>"nav",
+            "container_class"=>"menu__evenement"
+        ));
     
-    <?php
         if ( have_posts() ) :
             while ( have_posts() ) :
                 the_post();?>
@@ -30,5 +36,5 @@
     </main>
 <?php get_footer();?>
 
-
+</html>
 

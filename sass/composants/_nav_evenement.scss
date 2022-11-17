@@ -1,0 +1,24 @@
+.menu__evenement {
+    
+}
+.menu__evenement .menu {
+    list-style: none;
+    display: flex;
+    border: 1px solid #bbb;
+    justify-content: space-around;
+}
+
+.menu__evenement .menu_item {
+    width: 25%;
+}
+
+.evenement__porte {
+   background-color: aqua;
+}
+
+.evenement__projet {
+    background-color: aquamarine;
+}
+.evenement__stage {
+    background-color: rgb(221, 147, 147);
+}

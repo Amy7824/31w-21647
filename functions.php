@@ -56,6 +56,11 @@ function underscore_scripts() {
                     filemtime(get_template_directory() . '/style.css'),
                     false
                     );
+                    /*
+					wp_enqueue_style( 'google-fonts',
+					'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+					false );	
+                    */	
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
 
@@ -70,20 +75,54 @@ add_action( 'after_setup_theme', 'mon_31w_register_nav_menu', 0 );
 
 /* --------------pour filtre chacun des élément du menu */
 
-function igc31w_filtre_choix_menu($obj_menu){
-    //var_dump($obj_menu);
-    //die();
-    foreach($obj_menu as $cle => $value)
-    {
-       // print_r($value);
-       $value->title = substr($value->title,7);
-       $value->title = wp_trim_words($value->title,3, " ...");
-       // echo $value->title . '<br>';
- 
-    }
+/**
+ * filtre le menu «aside»
+ * @arg  $obj_menu, $arg
+ */
+
+function igc31w_filtre_choix_menu($obj_menu, $arg){
+    //echo "/////////////////  obj_menu";
+    // var_dump($obj_menu);
+    //  echo "/////////////////  arg";
+    //  var_dump($arg);
+
+    if ($arg->menu == "aside"){
     
+        foreach($obj_menu as $cle => $value)
+        {
+           
+        // print_r($value);
+        /*retirer le sigle numérique du cours*/
+        $value->title = substr($value->title,7);
+        /*retirer la durée du cours ex:75h */
+        $value->title = substr($value->title,0,strpos($value->title, '('));
+        $value->title = wp_trim_words($value->title,3, " ...");
+        // echo $value->title . '<br>';
+ 
+        }
+    }
+    //die();
     return $obj_menu;
 }
+
+add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
+
+/* ----------------------------------------------------------- Ajout de la description dans menu */
+/** filtre du menu evenement
+ * @arg  string $item_output  string représentant l'élément du menu
+ * @arg obj $item    element du menu
+ */
+function prefix_nav_description( $item_output, $item) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace( '</a>',
+        '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu__item__icone"></div></a>',
+              $item_output );
+    }
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
+// l'argument 10 : niveau de privilège
+// l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
@@ -91,7 +130,7 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'            => 'footer-1',
-			'name'          => __( 'Sidebar-footer-1 ' ),
+			'name'          => __( 'Sidebar - footer-1 ' ),
 			'description'   => __( 'Premier sidebar du footer' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -104,7 +143,7 @@ function my_register_sidebars() {
     register_sidebar(
 		array(
 			'id'            => 'footer-2',
-			'name'          => __( 'Sidebar-footer-2 ' ),
+			'name'          => __( 'Sidebar - footer-2 ' ),
 			'description'   => __( 'Deuxième sidebar du footer' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -138,4 +177,3 @@ function my_register_sidebars() {
 		)
 	);
 }
-add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu");

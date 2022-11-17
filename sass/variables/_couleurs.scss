@@ -9,10 +9,15 @@ $couleur--h2h3h4: rgb(116, 226, 208);
 $couleur--h5h6: rgb(14, 85, 73);
 $couleur--code: rgb(187, 60, 60);
 
+/* --------------------- Couleurs des liens du titre principal*/
+$couleur__link__site__title: rgb(8, 52, 117);
+$couleur__link__site__title--visited: rgb(11, 52, 100);
+$couleur__link__site__title--hover: rgb(38, 74, 114);
+
 /* ----- couleur des liens ------*/
-$couleur__link: rgb(29, 23, 217);
-$couleur__link-visited:rgb(117, 6, 6);
-$couleur__link-hover:rgb(241, 13, 13);
+$couleur__link: rgb(69, 127, 214);
+$couleur__link--visited: rgb(35, 125, 228);
+$couleur__link--hover: rgb(32, 96, 138);
 
 $couleur__link__aside: rgb(13, 35, 105);
 $couleur__link__aside-visited: rgb(60, 58, 199);

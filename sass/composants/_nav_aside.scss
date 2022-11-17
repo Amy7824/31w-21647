@@ -1,7 +1,6 @@
 .site__menu {
   position: relative;
 }
-
 .chk-burger {
   display: none;
 }
@@ -13,18 +12,18 @@
 .chk-burger:checked ~ .menu__aside {
   transform: translateX(0);
 }
-
 .burger {
   position: absolute;
-  width : 2rem;
+  width: 2rem;
   height: 2rem;
-  top: 15px;
-  left: 13vw;
+  top: 10px;
+  left: 10px;
   transform: rotate(0deg);
-  transition: transform .5s;
+  transition: transform 0.5s;
   font-size: 2rem;
-  color: rgb(15, 14, 14);
+  color: #fff;
 }
+
 .menu__aside {
   //nav
   display: flex;
@@ -36,7 +35,9 @@
   transition: transform .5s;
   @media screen and (min-width: 700px) {
     position: static;
-    transform: translateX(10);
+    transform: translateX(0);
+     /* important de revenir à width 100%  pour remplacer le 100vw*/
+     width: 100%;
   }
 
   .menu {
@@ -53,7 +54,7 @@
   a {
     color: #fff;
     text-decoration: none;
-    padding: 15px;
+    padding: 5px 3px;
   }
 }
 /*
