@@ -2,25 +2,28 @@
   display: flex;
   justify-content: space-around;
   background-color: #000;
-  
 }
 .site__footer div {
   flex: 1;
 }
 
 #menu-utile-3 {
-  padding-top:20px;
+  padding-top: 20px;
   font-size: 20px;
   font-family: var($police__titre-principal);
   font-weight: bold;
 }
-#menu-utile li a{
- color: #fff;
+#menu-utile li a {
+  color: #fff;
 }
 
-#menu-utile li:hover{
+#menu-utile li a:hover {
+  color: rgb(243, 232, 21);
+}
+
+#menu-utile li:hover {
   color: rgb(24, 13, 239);
- }
+}
 .menu-utile-container {
   margin-top: 2em;
 }

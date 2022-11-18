@@ -22,8 +22,8 @@ function underscore_setup() {
     add_theme_support( 'title-tag' );
 
     add_theme_support( 'custom-logo', array(
-		'height' => 150,
-		'width'  => 150,
+		'height' => 100,
+		'width'  => 80,
 	) );
 
 	add_theme_support( 'post-thumbnails' );

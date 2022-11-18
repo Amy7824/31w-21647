@@ -29,15 +29,14 @@
   display: flex;
   position: absolute;
   width: 100vw;
-  top:70px;
+  top: 70px;
   transform: translateX(-100vw);
-  background-color: #000;
-  transition: transform .5s;
+  transition: transform 0.5s;
   @media screen and (min-width: 700px) {
     position: static;
     transform: translateX(0);
-     /* important de revenir à width 100%  pour remplacer le 100vw*/
-     width: 100%;
+    /* important de revenir à width 100%  pour remplacer le 100vw*/
+    width: 100%;
   }
 
   .menu {
