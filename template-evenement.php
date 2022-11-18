@@ -1,7 +1,3 @@
-template-evenement.php
- 
-
-
 <?php
 /**
 * Template Name: Evenement
@@ -14,10 +10,10 @@ template-evenement.php
 <?php get_header() ?>
 <main>
  
-    <h1>---- Template Evenement ------</h1>
    <?php if (have_posts()): the_post(); ?>
         <?php the_title() ?>
-        <?php the_content() ?>        
+        <?php the_content() ?>      
+        <p> venez nous joindre au <?php the_field('adresse'); ?> </p>   
    <?php endif ?>
 </main>
 <?php get_footer() ?>
