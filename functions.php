@@ -11,7 +11,7 @@ if ( ! defined( '_S_VERSION' ) ) {
     // Replace the version number of the theme on each release.
     define( '_S_VERSION', '1.0.0' );
 }
-
+////////////////////////
 function underscore_setup() {
     /*
         * Let WordPress manage the document title.
@@ -21,6 +21,13 @@ function underscore_setup() {
         */
     add_theme_support( 'title-tag' );
 
+    add_theme_support( 'custom-logo', array(
+		'height' => 150,
+		'width'  => 150,
+	) );
+
+	add_theme_support( 'post-thumbnails' );
+    
     /*
         * Switch default core markup for search form, comment form, and comments
         * to output valid HTML5.
