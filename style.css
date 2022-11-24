@@ -877,6 +877,8 @@ span {
     grid-template-columns: 25% auto;
     grid-template-areas: "header header" "menu main" "sidebar main" ". main" "footer footer";
   }
+  
+
 }
 .menu__aside .menu-item {
   max-width: 100%;
