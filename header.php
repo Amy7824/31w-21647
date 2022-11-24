@@ -37,16 +37,19 @@
 			<h1 class="site__title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</h1>
-				
-			<?php
+			<aside class="site__sidebar">
+			<div><?php get_sidebar( 'aside-1' ); ?></div>
+			<div><?php get_sidebar( 'aside-2' ); ?></div>
+			</aside>	
+			
+		</div><!-- .site-branding -->
+		
+	</header><!-- #masthead -->
+	<?php
 			$underscores_description = get_bloginfo( 'description', 'display' );
 			if ( $underscores_description || is_customize_preview() ) : ?>
 				<p class="site__description"><?php echo $underscores_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
-		
-	</header><!-- #masthead -->
-	
 	<aside class="site__menu">
 		<input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
 		<label class="burger" for="chk-burger"> &#11135;</label>
@@ -59,7 +62,4 @@
 		));
 	    ?>
 	</aside>
-	<aside class="site__sidebar">
-		<div><?php get_sidebar( 'aside-1' ); ?></div>
-		<div><?php get_sidebar( 'aside-2' ); ?></div>
-	</aside>
+	
