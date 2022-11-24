@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 /*!
 Theme Name: zhile-31W-Cours
 Theme URI: http://underscores.me/
@@ -350,16 +351,12 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(173, 195, 215);
+  background-color: #ddd;
 }
 
 main {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-.trace {
-  background-color: #0f0;
 }
 
 h1 {
@@ -705,7 +702,10 @@ span {
 .menu__principal a:hover {
   background-color: #555;
 }
-
+.custom-logo {
+  margin-top: 1em;
+  margin-left: 2em;
+}
 /* transformation en CSS */
 .site__menu {
   position: relative;
@@ -724,6 +724,7 @@ span {
 }
 
 .burger {
+  display: block;
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -734,11 +735,16 @@ span {
   font-size: 2rem;
   color: #fff;
 }
-
+@media screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
 .menu__aside {
+  background-color: antiquewhite;
   display: flex;
   position: absolute;
-  width: 100vw;
+  width: 40vw;
   top: 70px;
   transform: translateX(-100vw);
   transition: transform 0.5s;
@@ -772,8 +778,8 @@ span {
 .menu__evenement .menu {
   list-style: none;
   display: flex;
-  border: 1px solid #bbb;
   justify-content: space-around;
+  margin-left: -2em;
 }
 
 .menu__evenement .menu_item {
@@ -801,15 +807,17 @@ span {
 }
 
 .menu__item__icone {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #aaa;
+  margin-top: 20px;
 }
-
+.site__branding {
+  width: 20vw;
+}
 .site__title {
   font-size: clamp(2rem, 4vw, 5rem);
 }
-
+.site__title a {
+  margin-left: 0.5em;
+}
 .site__footer {
   display: flex;
   justify-content: space-around;
@@ -827,7 +835,6 @@ span {
 }
 
 .liste__cours {
-  flex: 0 1 20%;
 }
 
 .site__header {
@@ -838,7 +845,9 @@ span {
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #ccc;
+  background-color: #ddd;
+  margin-top: -16em;
+  margin-left: 3em;
 }
 
 .site__menu {
@@ -897,13 +906,22 @@ span {
 }
 
 #sidebar-footer-2 {
-  margin-top: 2em;
+  margin-top: 5em;
+  margin-right: 8em;
 }
 
 #sidebar-footer-3 {
   margin-top: 2em;
 }
-
+.wp-image-188 {
+  margin-left: 8em;
+  margin-top: 5em;
+}
+@media screen and (max-width: 900px) {
+  .wp-image-188 {
+    display: none;
+  }
+}
 .widget__area {
   grid-area: sidebar;
 }

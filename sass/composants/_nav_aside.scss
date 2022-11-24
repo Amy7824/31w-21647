@@ -13,6 +13,7 @@
   transform: translateX(0);
 }
 .burger {
+  display: block;
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -23,12 +24,18 @@
   font-size: 2rem;
   color: #fff;
 }
+@media screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
 
 .menu__aside {
   //nav
   display: flex;
+  background-color: antiquewhite;
   position: absolute;
-  width: 100vw;
+  width: 40vw;
   top: 70px;
   transform: translateX(-100vw);
   transition: transform 0.5s;

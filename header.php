@@ -16,7 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<script src="https://kit.fontawesome.com/4e2b8e41f4.js" crossorigin="anonymous"></script>
+	<style>.site__header { background-color:<?= get_theme_mod("site__title__background"); ?>;}</style>
 	<?php wp_head(); ?>
 </head>
 

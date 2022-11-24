@@ -6,6 +6,7 @@
  *
  * @package underscore
  */
+require_once("options/apparence.php");
 
 if ( ! defined( '_S_VERSION' ) ) {
     // Replace the version number of the theme on each release.
@@ -114,7 +115,7 @@ function igc31w_filtre_choix_menu($obj_menu, $arg){
 
 add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
 
-/* ----------------------------------------------------------- Ajout de la description dans menu */
+/* ------------ Ajout de la description dans menu */
 /** filtre du menu evenement
  * @arg  string $item_output  string représentant l'élément du menu
  * @arg obj $item    element du menu
@@ -122,7 +123,7 @@ add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
 function prefix_nav_description( $item_output, $item) {
     if ( !empty( $item->description ) ) {
         $item_output = str_replace( '</a>',
-        '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu__item__icone"></div></a>',
+        '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu__item__icone"><i class="fa-solid fa-arrow-right"></i></div></a>',
               $item_output );
     }
     return $item_output;
@@ -131,7 +132,7 @@ add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
 // l'argument 10 : niveau de privilège
 // l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
 
-/* -------------------------------------------------------- Initialisation des sidebar */
+/* --------------------------- Initialisation des sidebar */
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
 	/* Register the 'footer-1' sidebar. */
@@ -178,6 +179,30 @@ function my_register_sidebars() {
 			'id'            => 'aside-1',
 			'name'          => __( 'Sidebar-aside-1 ' ),
 			'description'   => __( 'premier sidebar du aside' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+    /* Repeat register_sidebar() code for additional sidebars. */
+    register_sidebar(
+		array(
+			'id'            => 'aside-2',
+			'name'          => __( 'Sidebar-aside-2 ' ),
+			'description'   => __( 'sidebar-social du aside' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+    /* Repeat register_sidebar() code for additional sidebars. */
+    register_sidebar(
+		array(
+			'id'            => 'aside-3',
+			'name'          => __( 'Sidebar-aside-3 ' ),
+			'description'   => __( 'sidebar-recherche du aside' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
