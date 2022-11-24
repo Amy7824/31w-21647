@@ -950,12 +950,16 @@ span {
 #sidebar {
   display: none;
 }
+
+.metadata a {
+  display: none;
+}
 /*.no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "main" "footer";
 }
-
+.
 
 
 .no-sidebar .site {

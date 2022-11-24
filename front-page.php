@@ -35,7 +35,8 @@
                 the_post_thumbnail('thumbnail');
             }
             ?>
-                <?= wp_trim_words(get_the_excerpt(),10," ... "); ?>
+                <a href="<?php the_permalink();?>">
+                <?= wp_trim_words(get_the_excerpt(),10," ... "); ?><i class="fas fa-long-arrow-alt-right"></i></a>
                 </article>  
                
           <?php  endwhile;?>
