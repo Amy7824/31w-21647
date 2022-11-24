@@ -830,13 +830,9 @@ span {
 }
 
 .liste {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: block;
 }
 
-.liste__cours {
-}
 
 .site__header {
   grid-area: header;
