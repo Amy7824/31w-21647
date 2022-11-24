@@ -951,9 +951,6 @@ span {
   display: none;
 }
 
-.metadata a {
-  display: none;
-}
 /*.no-sidebar .site {
   display: grid;
   grid-template-columns: auto;

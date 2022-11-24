@@ -48,7 +48,7 @@ else:
              if( strlen($permalink) > 60 ) : echo mb_substr( $permalink, 0, 60, "UTF-8" ) . '&hellip;'; 
 
              else : echo $permalink;
-                  echo'<i class="fas fa-long-arrow-alt-right"></i>';
+                    echo'<i class="fas fa-long-arrow-alt-right"></i>';
              endif;?>
             
       </a>
